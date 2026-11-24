@@ -1,0 +1,23 @@
+[Unit]
+Description=Randevu Platformu
+After=network-online.target postgresql.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=randevu-app
+Group=randevu-app
+WorkingDirectory=/opt/randevu-platformu/current
+EnvironmentFile=/etc/randevu-platformu/runtime.env
+Environment=NODE_ENV=production
+Environment=NEXT_TELEMETRY_DISABLED=1
+ExecStart=/usr/bin/env node node_modules/next/dist/bin/next start --hostname 127.0.0.1 --port 4312
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectSystem=strict
+ProtectHome=yes
+
+[Install]
+WantedBy=multi-user.target

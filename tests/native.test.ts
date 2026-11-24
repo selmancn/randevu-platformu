@@ -15,5 +15,7 @@ test('üretim HTTPS ayarında yerel PostgreSQL parolası ortamdan alınabilir', 
   const { runtimeDatabaseConfig } = await import('../lib/postgres-config.ts');
   const result = await runtimeDatabaseConfig({ APPOINTMENT_DB_PASSWORD: 'b'.repeat(48), APPOINTMENT_HTTPS: '1' });
   assert.equal(result.password, 'b'.repeat(48));
+  assert.equal((await runtimeDatabaseConfig({ APPOINTMENT_DB_PASSWORD: 'b'.repeat(48), APPOINTMENT_DB_PORT: '5432' })).port, 5432);
+  await assert.rejects(() => runtimeDatabaseConfig({ APPOINTMENT_DB_PASSWORD: 'b'.repeat(48), APPOINTMENT_DB_PORT: '0' }));
   await assert.rejects(() => runtimeDatabaseConfig({ APPOINTMENT_HTTPS: '1' }));
 });
