@@ -1,0 +1,29 @@
+.customer-access { display: flex; justify-content: flex-end; align-items: center; flex-wrap: wrap; gap: 6px; }
+.customer-access a { display: inline-flex; gap: 7px; align-items: center; justify-content: center; min-height: 44px; padding: 7px 14px; border-radius: 28px; color: #183c30; text-decoration: none; font-size: .91rem; font-weight: 700; }
+.customer-access a:hover { background: #eaf0e9; }
+.profile > .customer-access { margin-bottom: 14px; }
+.customer-access .access-main { background: #193d31; color: #fff; }
+.customer-access .access-main:hover { background: #285747; }
+.account-page { width: min(1010px,calc(100% - 36px)); padding: clamp(22px,6vw,76px) 0; }
+.account-back { display: inline-flex; align-items: center; gap: 7px; min-height: 44px; font-weight: 650; text-decoration: none; margin-bottom: 13px; }
+.account-back:hover { text-decoration: underline; }
+.account-layout { display: grid; grid-template-columns: minmax(0,1.05fr) minmax(0,1fr); align-items: stretch; gap: 15px; }
+.account-intro { display: flex; flex-direction: column; justify-content: flex-end; min-height: 430px; padding: clamp(22px,4vw,45px); border-radius: 24px; color: #fff; background: #183e32; }
+.account-intro svg { color: #a8d3be; margin-bottom: 11px; }
+.account-intro h1 { font-size: clamp(2.25rem,5vw,4rem); margin-bottom: 12px; }
+.account-intro p { margin: 0; color: #ecf2ec; max-width: 33ch; }
+.account-card { align-self: stretch; padding: clamp(20px,3vw,34px); border-radius: 24px; }
+.account-card h2 { font-size: 1.55rem; }
+.account-google { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; background: #f4f6f3; border-color: #d2ded4; color: #526359; cursor: not-allowed; }
+.account-google:hover { background: #f4f6f3; }
+.account-google span { font-weight: 800; color: #435d8e; }
+.account-note { margin: 4px 0 0; color: var(--muted); font-size: .84rem; text-align: center; }
+.account-divider { display: flex; align-items: center; gap: 8px; color: var(--muted); margin: 15px 0; font-size: .85rem; }
+.account-divider::before, .account-divider::after { content: ''; height: 1px; flex: 1; background: var(--line); }
+.account-divider > span { display: inline-flex; align-items: center; gap: 5px; }
+.account-switch { min-height: 44px; display: inline-flex; align-items: center; margin-top: 9px; font-size: .9rem; }
+@media (max-width: 690px) {
+  .account-layout { grid-template-columns: minmax(0,1fr); }
+  .account-intro { min-height: 164px; border-radius: 18px; }
+  .account-card { border-radius: 18px; }
+}

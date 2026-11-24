@@ -1,0 +1,72 @@
+.business-detail { width: min(1120px,calc(100% - 44px)); padding-top: 25px; }
+.detail-header { margin-bottom: 20px; }
+.detail-access { display: flex; justify-content: space-between; align-items: center; gap: 6px; flex-wrap: wrap; }
+.detail-back { display: inline-flex; align-items: center; gap: 7px; min-height: 44px; color: var(--muted); font-size: .9rem; text-decoration: none; }
+.detail-back:hover { text-decoration: underline; }
+.detail-title-row { display: flex; align-items: end; justify-content: space-between; flex-wrap: wrap; gap: 15px; }
+.detail-title-row > div { min-width: 0; }
+.detail-title-row h1 { margin: 5px 0 10px; font-size: clamp(2.15rem,5vw,3.65rem); }
+.detail-category { color: #28634e; margin: 4px 0 0; font-size: .88rem; font-weight: 720; }
+.detail-meta { display: flex; align-items: center; flex-wrap: wrap; gap: 3px 18px; color: var(--muted); font-size: .91rem; }
+.detail-meta > * { color: inherit; display: inline-flex; align-items: center; gap: 5px; min-height: 29px; }
+.detail-meta > a { min-height: 44px; }
+.detail-meta svg, .detail-location svg { flex: none; color: #2b654f; }
+.detail-meta a svg, .detail-review svg { color: #976319; }
+.detail-directions { display: inline-flex; gap: 7px; margin-bottom: 4px; }
+.detail-cover { position: relative; overflow: hidden; margin: 0 0 clamp(21px,4vw,38px); height: clamp(255px,29vw,400px); border-radius: 20px; background: #e6e9e0; }
+.detail-cover img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 56%; }
+.detail-cover figcaption { position: absolute; bottom: 13px; left: 15px; background: #102d24ee; color: #fff; padding: 5px 9px; border-radius: 6px; font-size: .75rem; font-weight: 650; }
+.detail-layout { display: grid; grid-template-columns: minmax(0,1.75fr) minmax(295px,1fr); gap: clamp(22px,4vw,52px); align-items: start; }
+.detail-layout-single { grid-template-columns: minmax(0,1fr); max-width: 700px; }
+.detail-content { min-width: 0; display: grid; gap: 28px; }
+.detail-section { scroll-margin-top: 16px; border-bottom: 1px solid var(--line); padding-bottom: 25px; }
+.detail-section-heading { display: flex; justify-content: space-between; align-items: start; flex-wrap: wrap; gap: 5px 10px; margin-bottom: 14px; }
+.detail-section-heading h2 { margin: 0; }
+.detail-section-heading p { margin: 5px 0 0; color: var(--muted); font-size: .9rem; }
+.detail-service-count { display: inline-block; color: #285c4b; background: #e7efe7; border-radius: 20px; padding: 3px 9px; font-size: .8rem; font-weight: 700; }
+.detail-services { display: grid; gap: 8px; list-style: none; margin: 0; padding: 0; }
+.detail-service { display: flex; justify-content: space-between; align-items: center; gap: 12px; min-height: 60px; padding: 10px 14px; border: 1px solid #d7e0d5; border-radius: 11px; background: #fff; color: var(--ink); text-decoration: none; }
+.detail-service:hover, .detail-service[data-chosen="true"] { border-color: #39765c; background: #f0f6f0; }
+.detail-service h3 { margin: 0; font-size: 1rem; overflow-wrap: anywhere; }
+.detail-service-meta { display: flex; gap: 5px 11px; flex-wrap: wrap; }
+.detail-service-meta span, .detail-service-price { display: inline-flex; align-items: center; gap: 5px; }
+.detail-service-meta span { color: var(--muted); font-size: .83rem; margin-top: 3px; }
+.detail-service-price { gap: 8px; white-space: nowrap; color: #1f5544; }
+.detail-service-price svg { flex: none; }
+.detail-location { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0 8px; padding: 8px 12px; background: #e9f0e8; border-radius: 10px; margin-bottom: 10px; }
+.detail-location-info { display: flex; gap: 8px; align-items: center; min-height: 38px; }
+.detail-location a { display: inline-flex; align-items: center; min-height: 44px; }
+.detail-hours { margin: 8px 0 0; }
+.detail-hours > div { display: flex; justify-content: space-between; gap: 12px; padding: 7px 0; border-bottom: 1px solid var(--line); }
+.detail-hours > div:last-child { border: 0; }
+.detail-hours dd { margin: 0; font-variant-numeric: tabular-nums; }
+.detail-review p { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; margin-bottom: 0; }
+.detail-reservation { position: sticky; top: 17px; min-width: 0; }
+.detail-booking { padding: clamp(17px,2.35vw,26px); border-color: #d1dbd0; box-shadow: 0 12px 28px #173b3114; scroll-margin-top: 18px; }
+.detail-booking-top { display: flex; justify-content: space-between; gap: 10px; align-items: start; margin-bottom: 16px; }
+.detail-booking h2 { margin: 0; font-size: 1.13rem; }
+.detail-booking-top p { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 5px; margin: 4px 0 0; }
+.detail-booking-top strong { font-size: clamp(1.44rem,3vw,1.85rem); line-height: 1.15; letter-spacing: -.035em; }
+.detail-booking-top span { color: var(--muted); font-size: .84rem; }
+.detail-calendar-icon { flex: none; display: grid; place-items: center; width: 44px; height: 44px; border-radius: 12px; color: #26614d; background: #e7f0e8; }
+.detail-booking button { display: inline-flex; align-items: center; justify-content: center; gap: 7px; min-height: 46px; }
+.detail-availability { margin-top: 17px; padding-top: 15px; border-top: 1px solid var(--line); }
+.detail-availability h3, .detail-availability p { margin: 0; }
+.detail-availability h3 { font-size: 1.1rem; }
+.detail-mobile-booking { display: none; }
+@media (max-width: 760px) {
+  .business-detail { width: calc(100% - 30px); padding-top: 14px; }
+  .business-detail.has-booking { padding-bottom: calc(101px + env(safe-area-inset-bottom)); }
+  .detail-cover { height: clamp(190px,55vw,320px); border-radius: 15px; }
+  .detail-title-row { gap: 6px 12px; }
+  .detail-layout { display: flex; flex-direction: column; gap: 23px; align-items: stretch; }
+  .detail-content { display: contents; }
+  .detail-reservation { position: static; order: 1; }
+  #konum { order: 2; }
+  #degerlendirmeler { order: 3; }
+  .detail-mobile-booking { display: flex; position: fixed; z-index: 100; inset: auto 0 0; justify-content: space-between; gap: 10px; align-items: center; padding: 9px 15px calc(9px + env(safe-area-inset-bottom)); background: #fff; border-top: 1px solid var(--line); box-shadow: 0 -3px 18px #173b310d; }
+  .detail-mobile-booking > div { min-width: 0; }
+  .detail-mobile-booking strong, .detail-mobile-booking small { display: block; }
+  .detail-mobile-booking small { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+  .detail-mobile-booking a { display: inline-flex; gap: 6px; align-items: center; min-height: 46px; padding: 0 13px; background: var(--forest); border-radius: 9px; text-decoration: none; font-weight: 700; color: white; white-space: nowrap; }
+}

@@ -1,0 +1,4 @@
+# Konum verilerinin kaynakları
+
+- `locations.json` 81 il ve 973 ilçenin çevrimdışı referansıdır. Kaynak [Türkiye Mülki İdare Bölümleri veri seti](https://github.com/sabrigunes/turkey-administrative-units-dataset/tree/359332c0270b946621ca2ff816fc120253d689c1), lisans [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/).
+- `map-centers.json` haritayı bir ilçeye taşıyan yaklaşık merkez noktalarıdır. Noktalar [il-ilce-koordinat](https://github.com/AEKHer/il-ilce-koordinat/tree/cc0df81614f248d6dfbd3e584a1b910d3ae72c2d) projesinin OpenStreetMap Nominatim verisinden, il ve ilçe kimlikleriyle eşleştirilmiştir. Kaynak projenin [MIT bildirimi](map-centers-LICENSE.txt) korunur. Koordinat verisi © OpenStreetMap katkıcıları, [ODbL 1.0](https://opendatacommons.org/licenses/odbl/1-0/) ile sunulur. [OpenStreetMap atıf bilgisi](https://www.openstreetmap.org/copyright).
