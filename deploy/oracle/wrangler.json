@@ -1,0 +1,9 @@
+{
+  "name": "randevu-platformu",
+  "main": "edge.ts",
+  "compatibility_date": "2026-11-24",
+  "workers_dev": true,
+  "preview_urls": false,
+  "vpc_services": [{ "binding": "ORACLE", "service_id": "01a20edd-93f7-7ce1-9513-cf2332ae800a" }],
+  "observability": { "enabled": false }
+}

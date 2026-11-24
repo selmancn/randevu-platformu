@@ -2,6 +2,8 @@
 
 Kapsam, fazlar ve görevler [ürün planında](PLAN.md). [Mimari karar](decisions.md) yerel veri katmanı ile üretim hedefini açıklar.
 
+[Oracle canlı uygulama](https://randevu-platformu.selman-cinn.workers.dev) · [Otomatik dağıtım](deploy/oracle/README.md)
+
 ## Yerelde çalıştırma
 
 ```powershell

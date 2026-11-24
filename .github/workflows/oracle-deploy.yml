@@ -54,4 +54,9 @@ jobs:
             -o ConnectTimeout=15 -o ServerAliveInterval=15 \
             randevu-deploy@130.61.82.184 "$RELEASE_SHA"
       - name: Verify public health
-        run: curl --fail --silent --show-error --retry 4 --max-time 15 https://randevu.130-61-82-184.sslip.io/api/health
+        env:
+          RELEASE_SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          curl --fail --silent --show-error --retry 4 --max-time 15 https://randevu-platformu.selman-cinn.workers.dev/api/health |
+            jq -e --arg revision "$RELEASE_SHA" '.status == "ready" and .revision == $revision'

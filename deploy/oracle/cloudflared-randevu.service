@@ -1,0 +1,19 @@
+[Unit]
+Description=Randevu Platformu Cloudflare Tunnel
+After=network-online.target nginx.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=randevu-app
+Group=randevu-app
+ExecStart=/usr/local/bin/cloudflared --no-autoupdate tunnel run --token-file /etc/randevu-platformu/tunnel-token
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectSystem=strict
+ProtectHome=yes
+
+[Install]
+WantedBy=multi-user.target
